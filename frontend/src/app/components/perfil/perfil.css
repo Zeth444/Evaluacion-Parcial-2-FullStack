@@ -1,0 +1,76 @@
+.cyber-container {
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #0a0a0a;
+  border: 2px solid #39ff14;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5), inset 0 0 15px rgba(57, 255, 20, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cyber-title {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.cyber-label {
+  display: block;
+  color: #39ff14;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+.cyber-input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #111;
+  border: 1px solid #39ff14;
+  color: #39ff14;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  box-shadow: 0 0 10px #39ff14;
+  background-color: #000;
+}
+
+.cyber-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #fce803;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fce803;
+  transition: all 0.2s ease;
+}
+
+.cyber-button:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px #fff;
+}
+
+.cyber-error-text {
+  color: #ff003c;
+  font-size: 12px;
+  margin-top: 5px;
+  text-shadow: 0 0 5px #ff003c;
+}
+
+.cyber-alert {
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+}

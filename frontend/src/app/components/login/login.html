@@ -1,0 +1,32 @@
+<div class="cyber-container">
+  <h2 class="cyber-title">System Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div style="margin-bottom: 20px;">
+      <label class="cyber-label">>_ USER_EMAIL:</label>
+      <input type="email" formControlName="correo" class="cyber-input" autocomplete="off" spellcheck="false">
+
+      <div *ngIf="loginForm.get('correo')?.invalid && loginForm.get('correo')?.touched" class="cyber-error-text">
+        [ERROR]: Correo requerido o formato inválido.
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label class="cyber-label">>_ PASSWORD:</label>
+      <input type="password" formControlName="password" class="cyber-input">
+
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="cyber-error-text">
+        [ERROR]: Contraseña requerida.
+      </div>
+    </div>
+
+    <div *ngIf="mensajeError" class="cyber-alert">
+      ⚠ {{ mensajeError }}
+    </div>
+
+    <button type="submit" class="cyber-button">
+      Iniciar
+    </button>
+  </form>
+</div>

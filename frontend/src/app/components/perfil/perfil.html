@@ -1,0 +1,49 @@
+<div class="cyber-container" style="max-width: 600px;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2 class="cyber-title">System_Profile</h2>
+    <button (click)="cerrarSesion()" class="cyber-button" style="width: auto; padding: 5px 15px; margin-top: 0; background-color: #ff003c; color: white; box-shadow: 0 0 10px #ff003c;">
+      Log_Out
+    </button>
+  </div>
+
+  <form [formGroup]="perfilForm" (ngSubmit)="onSubmit()" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+
+    <div>
+      <label class="cyber-label">>_ NAME:</label>
+      <input type="text" formControlName="nombre" class="cyber-input" spellcheck="false">
+      <div *ngIf="perfilForm.get('nombre')?.invalid && perfilForm.get('nombre')?.touched" class="cyber-error-text">Requerido.</div>
+    </div>
+
+    <div>
+      <label class="cyber-label">>_ SURNAME:</label>
+      <input type="text" formControlName="apellido" class="cyber-input" spellcheck="false">
+      <div *ngIf="perfilForm.get('apellido')?.invalid && perfilForm.get('apellido')?.touched" class="cyber-error-text">Requerido.</div>
+    </div>
+
+    <div>
+      <label class="cyber-label">>_ AGE:</label>
+      <input type="text" formControlName="edad" class="cyber-input">
+      <div *ngIf="perfilForm.get('edad')?.invalid && perfilForm.get('edad')?.touched" class="cyber-error-text">Debe ser numérico.</div>
+    </div>
+
+    <div>
+      <label class="cyber-label">>_ PHONE_NUM:</label>
+      <input type="text" formControlName="telefono" class="cyber-input">
+      <div *ngIf="perfilForm.get('telefono')?.invalid && perfilForm.get('telefono')?.touched" class="cyber-error-text">Exactamente 8 dígitos.</div>
+    </div>
+
+    <div style="grid-column: 1 / -1;">
+      <label class="cyber-label">>_ EMAIL_CONTACT:</label>
+      <input type="email" formControlName="correo" class="cyber-input" spellcheck="false">
+      <div *ngIf="perfilForm.get('correo')?.invalid && perfilForm.get('correo')?.touched" class="cyber-error-text">Formato de correo inválido.</div>
+    </div>
+
+    <div *ngIf="mensaje" class="cyber-alert" style="grid-column: 1 / -1; background-color: rgba(57, 255, 20, 0.1); color: #39ff14; border-color: #39ff14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);">
+      {{ mensaje }}
+    </div>
+
+    <button type="submit" class="cyber-button" style="grid-column: 1 / -1;">
+      Upload_Data
+    </button>
+  </form>
+</div>
